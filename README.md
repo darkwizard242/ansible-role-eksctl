@@ -16,21 +16,25 @@ Available variables are listed below (located in `defaults/main.yml`):
 
 ```yaml
 eksctl_app: eksctl
-eksctl_version: 0.73.0
+eksctl_version: 0.74.0
 eksctl_osarch: amd64
 eksctl_dl_url: https://github.com/weaveworks/{{ eksctl_app }}/releases/download/v{{ eksctl_version }}/{{ eksctl_app }}_Linux_{{ eksctl_osarch }}.tar.gz
 eksctl_bin_path: /usr/local/bin
+eksctl_file_owner: root
+eksctl_file_group: root
 ```
 
 ### Variables table:
 
-Variable        | Description
---------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------
-eksctl_app      | Defines the app to install i.e. **eksctl**
-eksctl_version  | Defined to dynamically fetch the desired version to install. Defaults to: **0.73.0**
-eksctl_osarch   | Defines os architecture. Used for obtaining the correct type of binaries based on OS System Architecture.
-eksctl_dl_url   | Defines URL to download the eksctl binary from.
-eksctl_bin_path | Defined to dynamically set the appropriate path to store eksctl binary into. Defaults to (as generally available on any user's PATH): **/usr/local/bin**
+Variable          | Description
+----------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------
+eksctl_app        | Defines the app to install i.e. **eksctl**
+eksctl_version    | Defined to dynamically fetch the desired version to install. Defaults to: **0.74.0**
+eksctl_osarch     | Defines os architecture. Used for obtaining the correct type of binaries based on OS System Architecture.
+eksctl_dl_url     | Defines URL to download the eksctl binary from.
+eksctl_bin_path   | Defined to dynamically set the appropriate path to store eksctl binary into. Defaults to (as generally available on any user's PATH): **/usr/local/bin**
+eksctl_file_owner | Owner for the binary file of eksctl.
+eksctl_file_group | Group for the binary file of eksctl.
 
 ## Dependencies
 
