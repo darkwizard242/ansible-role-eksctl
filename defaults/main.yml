@@ -2,9 +2,11 @@
 # defaults file for eksctl
 
 eksctl_app: eksctl
-eksctl_version: 0.79.0
-eksctl_osarch: amd64
-eksctl_dl_url: https://github.com/weaveworks/{{ eksctl_app }}/releases/download/v{{ eksctl_version }}/{{ eksctl_app }}_Linux_{{ eksctl_osarch }}.tar.gz
+eksctl_version: 0.80.0
+eksctl_os: Linux
+eksctl_arch: amd64
+eksctl_dl_url: https://github.com/weaveworks/{{ eksctl_app }}/releases/download/v{{ eksctl_version }}/{{ eksctl_app }}_{{ eksctl_os }}_{{ eksctl_arch }}.tar.gz
 eksctl_bin_path: /usr/local/bin
 eksctl_file_owner: root
 eksctl_file_group: root
+eksctl_file_permission_mode: '0755'
