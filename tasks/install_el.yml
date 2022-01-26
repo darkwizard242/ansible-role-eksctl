@@ -10,3 +10,4 @@
     remote_src: yes
     owner: "{{ eksctl_file_owner }}"
     group: "{{ eksctl_file_group }}"
+    mode: "{{ eksctl_file_permission_mode }}"
