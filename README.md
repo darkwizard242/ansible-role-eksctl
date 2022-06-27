@@ -16,7 +16,7 @@ Available variables are listed below (located in `defaults/main.yml`):
 
 ```yaml
 eksctl_app: eksctl
-eksctl_version: 0.102.0
+eksctl_version: 0.103.0
 eksctl_os: Linux
 eksctl_arch: amd64
 eksctl_dl_url: https://github.com/weaveworks/{{ eksctl_app }}/releases/download/v{{ eksctl_version }}/{{ eksctl_app }}_{{ eksctl_os }}_{{ eksctl_arch }}.tar.gz
@@ -31,7 +31,7 @@ eksctl_file_permission_mode: '0755'
 Variable                    | Description
 --------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------
 eksctl_app                  | Defines the app to install i.e. **eksctl**
-eksctl_version              | Defined to dynamically fetch the desired version to install. Defaults to: **0.102.0**
+eksctl_version              | Defined to dynamically fetch the desired version to install. Defaults to: **0.103.0**
 eksctl_os                   | Defines os type. Defaults to: **Linux**
 eksctl_arch                 | Defines os architecture. Defaults to: **amd64**
 eksctl_dl_url               | Defines URL to download the eksctl binary from.
