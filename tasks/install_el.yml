@@ -2,7 +2,7 @@
 # tasks file for eksctl | EL Family
 
 - name: EL Family | Downloading and extracting {{ eksctl_app }} {{ eksctl_version }}
-  unarchive:
+  ansible.builtin.unarchive:
     src: "{{ eksctl_dl_url }}"
     dest: "{{ eksctl_bin_path }}"
     extra_opts:
