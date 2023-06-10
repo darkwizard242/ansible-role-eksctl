@@ -16,7 +16,7 @@ Available variables are listed below (located in `defaults/main.yml`):
 
 ```yaml
 eksctl_app: eksctl
-eksctl_version: 0.143.0
+eksctl_version: 0.144.0
 eksctl_os: Linux
 eksctl_arch: amd64
 eksctl_dl_url: https://github.com/weaveworks/{{ eksctl_app }}/releases/download/v{{ eksctl_version }}/{{ eksctl_app }}_{{ eksctl_os }}_{{ eksctl_arch }}.tar.gz
