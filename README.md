@@ -1,4 +1,4 @@
-[![build-test](https://github.com/darkwizard242/ansible-role-eksctl/workflows/build-and-test/badge.svg?branch=master)](https://github.com/darkwizard242/ansible-role-eksctl/actions?query=workflow%3Abuild-and-test) [![release](https://github.com/darkwizard242/ansible-role-eksctl/workflows/release/badge.svg)](https://github.com/darkwizard242/ansible-role-eksctl/actions?query=workflow%3Arelease) ![Ansible Role](https://img.shields.io/ansible/role/56889?color=dark%20green%20) ![Ansible Role](https://img.shields.io/ansible/role/d/56889?label=role%20downloads) ![Ansible Quality Score](https://img.shields.io/ansible/quality/56889?label=ansible%20quality%20score) [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=ansible-role-eksctl&metric=alert_status)](https://sonarcloud.io/dashboard?id=ansible-role-eksctl) [![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=ansible-role-eksctl&metric=sqale_rating)](https://sonarcloud.io/dashboard?id=ansible-role-eksctl) [![Reliability Rating](https://sonarcloud.io/api/project_badges/measure?project=ansible-role-eksctl&metric=reliability_rating)](https://sonarcloud.io/dashboard?id=ansible-role-eksctl) [![Security Rating](https://sonarcloud.io/api/project_badges/measure?project=ansible-role-eksctl&metric=security_rating)](https://sonarcloud.io/dashboard?id=ansible-role-eksctl) ![GitHub tag (latest SemVer)](https://img.shields.io/github/tag/darkwizard242/ansible-role-eksctl?label=release) ![GitHub repo size](https://img.shields.io/github/repo-size/darkwizard242/ansible-role-eksctl?color=orange&style=flat-square)
+[![build-test](https://github.com/darkwizard242/ansible-role-eksctl/workflows/build-and-test/badge.svg?branch=master)](https://github.com/darkwizard242/ansible-role-eksctl/actions?query=workflow%3Abuild-and-test) [![release](https://github.com/darkwizard242/ansible-role-eksctl/workflows/release/badge.svg)](https://github.com/darkwizard242/ansible-role-eksctl/actions?query=workflow%3Arelease) ![Ansible Role](https://img.shields.io/ansible/role/d/darkwizard242/eksctl) [![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=ansible-role-eksctl&metric=sqale_rating)](https://sonarcloud.io/dashboard?id=ansible-role-eksctl) [![Reliability Rating](https://sonarcloud.io/api/project_badges/measure?project=ansible-role-eksctl&metric=reliability_rating)](https://sonarcloud.io/dashboard?id=ansible-role-eksctl) [![Security Rating](https://sonarcloud.io/api/project_badges/measure?project=ansible-role-eksctl&metric=security_rating)](https://sonarcloud.io/dashboard?id=ansible-role-eksctl) ![GitHub tag (latest SemVer)](https://img.shields.io/github/tag/darkwizard242/ansible-role-eksctl?label=release) ![GitHub repo size](https://img.shields.io/github/repo-size/darkwizard242/ansible-role-eksctl?color=orange&style=flat-square)
 
 # Ansible Role: eksctl
 
@@ -16,7 +16,7 @@ Available variables are listed below (located in `defaults/main.yml`):
 
 ```yaml
 eksctl_app: eksctl
-eksctl_version: 0.175.0
+eksctl_version: 0.176.0
 eksctl_os: Linux
 eksctl_arch: amd64
 eksctl_dl_url: https://github.com/weaveworks/{{ eksctl_app }}/releases/download/v{{ eksctl_version }}/{{ eksctl_app }}_{{ eksctl_os }}_{{ eksctl_arch }}.tar.gz
@@ -31,7 +31,7 @@ eksctl_file_permission_mode: '0755'
 Variable                    | Description
 --------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------
 eksctl_app                  | Defines the app to install i.e. **eksctl**
-eksctl_version              | Defined to dynamically fetch the desired version to install. Defaults to: **0.175.0**
+eksctl_version              | Defined to dynamically fetch the desired version to install. Defaults to: **0.176.0**
 eksctl_os                   | Defines os type. Defaults to: **Linux**
 eksctl_arch                 | Defines os architecture. Defaults to: **amd64**
 eksctl_dl_url               | Defines URL to download the eksctl binary from.
