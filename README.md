@@ -17,9 +17,17 @@ Available variables are listed below (located in `defaults/main.yml`):
 ```yaml
 eksctl_app: eksctl
 eksctl_version: 0.183.0
-eksctl_os: Linux
-eksctl_arch: amd64
-eksctl_dl_url: https://github.com/weaveworks/{{ eksctl_app }}/releases/download/v{{ eksctl_version }}/{{ eksctl_app }}_{{ eksctl_os }}_{{ eksctl_arch }}.tar.gz
+eksctl_os: "{{ ansible_system }}"
+eksctl_architecture_map:
+  amd64: amd64
+  arm: arm64
+  x86_64: amd64
+  armv6l: armv6
+  armv7l: armv7
+  aarch64: arm64
+  32-bit: "386"
+  64-bit: amd64
+eksctl_dl_url: https://github.com/weaveworks/{{ eksctl_app }}/releases/download/v{{ eksctl_version }}/{{ eksctl_app }}_{{ eksctl_os }}_{{ eksctl_architecture_map[ansible_architecture] }}.tar.gz
 eksctl_bin_path: /usr/local/bin
 eksctl_file_owner: root
 eksctl_file_group: root
@@ -32,8 +40,8 @@ Variable                    | Description
 --------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------
 eksctl_app                  | Defines the app to install i.e. **eksctl**
 eksctl_version              | Defined to dynamically fetch the desired version to install. Defaults to: **0.183.0**
-eksctl_os                   | Defines os type. Defaults to: **Linux**
-eksctl_arch                 | Defines os architecture. Defaults to: **amd64**
+eksctl_os                   | Defines os type.
+eksctl_architecture_map     | Defines os architecture.
 eksctl_dl_url               | Defines URL to download the eksctl binary from.
 eksctl_bin_path             | Defined to dynamically set the appropriate path to store eksctl binary into. Defaults to (as generally available on any user's PATH): **/usr/local/bin**
 eksctl_file_owner           | Owner for the binary file of eksctl.
