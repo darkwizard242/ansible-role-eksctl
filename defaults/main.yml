@@ -2,7 +2,7 @@
 # defaults file for eksctl
 
 eksctl_app: eksctl
-eksctl_version: 0.196.0
+eksctl_version: 0.197.0
 eksctl_os: "{{ ansible_system }}"
 eksctl_architecture_map:
   amd64: amd64
