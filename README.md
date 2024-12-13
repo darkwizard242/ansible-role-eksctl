@@ -16,7 +16,7 @@ Available variables are listed below (located in `defaults/main.yml`):
 
 ```yaml
 eksctl_app: eksctl
-eksctl_version: 0.197.0
+eksctl_version: 0.198.0
 eksctl_os: "{{ ansible_system }}"
 eksctl_architecture_map:
   amd64: amd64
@@ -39,7 +39,7 @@ eksctl_file_permission_mode: '0755'
 Variable                    | Description
 --------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------
 eksctl_app                  | Defines the app to install i.e. **eksctl**
-eksctl_version              | Defined to dynamically fetch the desired version to install. Defaults to: **0.197.0**
+eksctl_version              | Defined to dynamically fetch the desired version to install. Defaults to: **0.198.0**
 eksctl_os                   | Defines os type.
 eksctl_architecture_map     | Defines os architecture.
 eksctl_dl_url               | Defines URL to download the eksctl binary from.
